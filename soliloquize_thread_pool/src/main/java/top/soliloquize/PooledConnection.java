@@ -16,7 +16,7 @@ import java.sql.Statement;
 @AllArgsConstructor
 public class PooledConnection {
     /**
-     * 表示繁忙标志     复用的标志 线程安全
+     * 表示繁忙标志     复用的标志
      */
     private boolean busy;
     /**

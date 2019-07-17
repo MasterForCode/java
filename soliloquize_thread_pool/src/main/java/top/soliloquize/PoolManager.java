@@ -3,7 +3,7 @@ package top.soliloquize;
 /**
  * @author wb
  * @date 2019/7/17
- * 提供线程池实例
+ * 提供连接池实例
  */
 public enum PoolManager {
     /**

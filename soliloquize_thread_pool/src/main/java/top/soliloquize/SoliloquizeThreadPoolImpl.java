@@ -69,12 +69,12 @@ public class SoliloquizeThreadPoolImpl implements SoliloquizeThreadPool {
             //判断该连接是否已被占用,false为可用(空闲),true为占用(繁忙)
             if (!conn.isBusy()) {
                 Connection connection = conn.getConnection();
-                conn.setConnection(connection);
                 try {
                     //判断该连接是否在设定时间连接通数据库(连接通为true)
                     if (!connection.isValid(2000)) {
                         connection = DriverManager.getConnection(url, user, password);
                     }
+                    conn.setConnection(connection);
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }

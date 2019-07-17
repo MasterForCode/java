@@ -17,7 +17,7 @@ public interface SoliloquizeThreadPool {
     /**
      * 对内创建连接
      *
-     * @param count 连接数两
+     * @param count 连接数量
      */
     void createConnections(int count);
 }
